@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  height: 100%;
+  background-color: #D0D0D0;
+  overflow: hidden;
+}
+body .backAngle {
+  width: 55%;
+  height: 200vh;
+  background-color: #1C1A1B;
+  transform: rotate(45deg) translate(-650px, -350px);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+main .backPage {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  background-color: #ECECEE;
+  box-shadow: -50px -15px 100px 25px #222;
+}
+main .backPage .topRightAngle {
+  width: 55%;
+  height: 100%;
+  background-color: #1C1A1B;
+  transform: rotate(-45deg) translate(160%, 20%);
+}
+main .frontPage {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  position: absolute;
+}
+main .frontPage .nameJob {
+  margin: 10% 0 0 10%;
+  border-bottom: 2px solid lightgray;
+  width: 70%;
+  display: flex;
+  flex-flow: column wrap;
+}
+main .frontPage .nameJob .name {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+main .frontPage .nameJob .job {
+  font-size: 1.2em;
+  color: #D0D0D0;
+}
+main .content {
+  display: flex;
+}
+main .title {
+  font-size: 1.2em;
+  display: block;
+}
+main .smallBorder {
+  border-bottom: 3px solid black;
+  padding-bottom: 7px;
+}
+main .contactNSkillCon {
+  padding: 5% 0 0 10%;
+  max-width: 20%;
+  border-bottom: 0;
+  border-right: 2px solid lightgray;
+  height: 100%;
+  font-size: 0.8em;
+}
+main .contactNSkillCon h5 {
+  margin-top: 15px;
+}
+main .contactNSkillCon p {
+  margin-right: 10px;
+}
+main .skill {
+  margin-top: 15px;
+  color: gray;
+  display: block;
+}
+main .skill .skillBox {
+  height: 10px;
+  width: 100px;
+  display: block;
+  border: 1px solid gray;
+}
+main .skill .skillBox #skill1 {
+  height: 100%;
+  background-color: lightgrey;
+  display: block;
+  width: 50px;
+}
+main .skill .skillBox #skill2 {
+  height: 100%;
+  background-color: lightgrey;
+  display: block;
+  width: 40px;
+}
+main .skill .skillBox #skill3 {
+  height: 100%;
+  background-color: lightgrey;
+  display: block;
+  width: 70px;
+}
+main .skill .skillBox #skill4 {
+  height: 100%;
+  background-color: lightgrey;
+  display: block;
+  width: 60px;
+}
+main .sections {
+  width: 68%;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  margin-top: 5%;
+}
+main .sections .seperate {
+  border-bottom: 2px solid lightgray;
+  width: 95%;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  margin-top: 2%;
+}
+main .sections .seperate .type {
+  margin-top: 15px;
+  flex-grow: 1;
+}
+main .sections .seperate .type p {
+  display: inline;
+  margin-left: 25%;
+  width: 50%;
+}
+main .sections .seperate .social {
+  margin-top: 15px;
+  flex-grow: -1;
+}
+main .sections .seperate .social span {
+  margin-right: 20%;
+}
+main .sections .first {
+  margin-top: 15px;
+  flex-grow: 1;
+}
+main .sections .seperate:last-child {
+  border-bottom: 0;
+}
+main .sections .seperate:first-child {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

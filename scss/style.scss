@@ -1,0 +1,184 @@
+@use "_vars" as v;
+
+@mixin page{
+    height: 90%;
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+}
+@mixin skillBar{
+    height: 100%;
+    background-color: v.$words;
+    display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    height: 100%;
+    background-color: v.$body-color;
+    overflow: hidden;
+
+    .backAngle{
+        width: 55%;
+        height: 200vh;
+        background-color: v.$primary-color;
+        transform: rotate(45deg) translate(-650px, -350px);
+        
+    }
+}
+main{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    .backPage{
+        @include page();
+        background-color: v.$page-color;
+        box-shadow: -50px -15px 100px 25px #222;
+
+        .topRightAngle{
+            width: 55%;
+            height: 100%;
+            background-color: v.$primary-color;
+            transform: rotate(-45deg) translate(160%, 20%);
+            
+        }
+
+        
+    }
+    .frontPage{
+        @include page();
+        position: absolute;
+
+        .nameJob{
+            margin: 10% 0 0 10%;
+            border-bottom: v.$borders;
+            width: 70%;
+            display: flex;
+            flex-flow: column wrap;
+            
+            .name{
+                font-size: 2.5em;
+                font-weight: bold;
+
+            }
+            .job{
+                font-size: 1.2em;
+                color: v.$body-color;
+            }
+        }
+    }
+    .content{
+        display: flex;
+    }
+    .title{
+        font-size: 1.2em;
+        display: block;
+    }
+    .smallBorder{
+        border-bottom: 3px solid black;
+        padding-bottom: 7px;
+    }
+    .contactNSkillCon{
+        padding: 5% 0 0 10%;
+        max-width: 20%;
+        border-bottom: 0;
+        border-right: v.$borders;
+        height: 100%;
+        font-size: .8em;
+        
+
+        h5{
+            margin-top: 15px;
+        }
+        p{
+            margin-right: 10px;
+        }
+    }
+    .skill{
+        margin-top: 15px;
+        color: gray;
+        display: block;
+
+        
+        .skillBox{
+            height: 10px;
+            width: 100px;
+            display: block;
+            border: 1px solid gray;
+
+            #skill1{
+                @include skillBar();
+                width: 50px;
+            }
+            #skill2{
+                @include skillBar();
+                width: 40px;
+            }
+            #skill3{
+                @include skillBar();
+                width: 70px;
+            }
+            #skill4{
+                @include skillBar();
+                width: 60px;
+            }
+        }
+
+    }
+    .sections{
+        width: 68%;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        margin-top: 5%;
+
+        .seperate{
+            border-bottom: v.$borders;
+            width: 95%;
+            padding-bottom: 10px;
+            padding-left: 5%;
+            margin-top: 2%;
+
+            .type{
+                margin-top: 15px;
+                flex-grow: 1;
+
+                p{
+                    display: inline;
+                    margin-left: 25%;
+                    width: 50%;
+                }
+            }
+            .social{
+                margin-top: 15px;
+                flex-grow: -1;
+
+                span{
+                    margin-right: 20%;
+                }
+            }
+        }
+
+        .first{
+            margin-top: 15px;
+            flex-grow: 1;
+        }
+
+        .seperate:last-child{
+            border-bottom: 0;
+        }
+        .seperate:first-child{
+            margin-top: 0;
+        }
+    }
+}
